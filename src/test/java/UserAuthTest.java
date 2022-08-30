@@ -4,6 +4,7 @@ import data.UserCreationTestData;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static steps.UserAuth.authUser;
 import static steps.UserCreation.createUser;
 
@@ -30,6 +31,6 @@ public class UserAuthTest {
                 .password(password)
                 .build();
         //авторизация под созданным логпассом
-        authUser(user_logpass).then().statusCode(200).and().body();
+        authUser(user_logpass).then().statusCode(200).and().assertThat().body(notNullValue());
     }
 }

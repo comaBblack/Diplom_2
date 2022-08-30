@@ -50,7 +50,7 @@ public class GetUserOrdersTest {
     @Parameterized.Parameters
     public static Object[][] getOrdersData() {
         return new Object[][]{
-                {getAuthToken(same_user).toString(), getAuthToken(same_user).toString(), SC_OK},
+                {getAuthToken(same_user), getAuthToken(same_user), SC_OK},
                 {"", "", SC_UNAUTHORIZED}
         };
     }

@@ -31,12 +31,10 @@ public class UserAuthParamTest {
 
     private final String email;
     private final String password;
-    private final int expectedCode;
 
-    public UserAuthParamTest(String email, String password, int expectedCode){
+    public UserAuthParamTest(String email, String password){
         this.email = email;
         this.password = password;
-        this.expectedCode = expectedCode;
     }
 
     @Before
